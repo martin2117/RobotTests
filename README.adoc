@@ -1,0 +1,50 @@
+= Robot Framework Quick Guide
+
+== Install RobotFramework &#129302;
+
+Robot Framework is implemented with Python and supports also Jython (JVM), IronPython (.NET) and PyPy. Before installing the framework, an obvious precondition is installing at least one of these interpreters.
+
+Installation process is fast and easy with following commands:
+----
+$ pip install robotframework
+$ pip install --upgrade robotframework-seleniumlibrary
+$ pip install webdrivermanager
+$ webdrivermanager firefox chrome --linkpath /usr/local/bin
+----
+You may receive some errors about permissions in Linux. But it works.
+
+
+== Run tests &#127939;
+
+
+`<Test Suite File Path>` => relative or absolute path to Test Suite file in `RobotTests\TestSuites` folder `e.g.: .\TestSuites\AddItemsToCart.robot`
+
+`<Test Case Name>` => name of Test Case inside Test Suite file `e.g.: Add two most expensive bed tables into shopping cart`
+
+For executing *all test suites = all tests* use this command from `RobotTests` folder 
+----
+$ robot TestSuites
+----
+
+For executing *whole test suite* use this command from `RobotTests` folder
+
+----
+$ robot <Test Suite File Path>
+----
+
+For executing *only one test case* use this command from `RobotTests` folder
+
+----
+$ robot -t '<Test Case Name>'  <Test Suite File Path>
+----
+
+All command line options are available `link:https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#command-line-options-for-test-execution[here]`.
+
+== Sources 	&#128218;
+
+You can find more information on 
+`link:https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html[Robot Framework Guide]`
+`link:https://github.com/robotframework/SeleniumLibrary#browser-drivers[Browser Drivers]`
+
+
+
